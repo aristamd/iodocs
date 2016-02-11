@@ -45,7 +45,10 @@ var livedocs = (function() {
         $('#oauthAuthenticated').show();
         $('section.credentials').addClass('authed');
         if (token) {
-            $('#accessToken').val(token.match(/access_token\=([^&]+)[&]?/)[1]);
+            token = token.match(/access_token\=([^&]+)[&]?/)[1];
+            $('#accessToken').each( function(index, element) {
+                element.value = token;
+            });
         }
     };
 
