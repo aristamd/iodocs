@@ -7,6 +7,6 @@ block content
         window.close();
   - else (apiInfo.oauth2)
       script.
-        var accToken = window.location.hash;
+        var accToken = window.location.search;
         window.parent.opener.livedocs.authSuccess(accToken); //Indicate to the parent page
         window.close();
