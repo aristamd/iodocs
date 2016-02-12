@@ -46,7 +46,7 @@ var livedocs = (function() {
         $('section.credentials').addClass('authed');
         if (token) {
             token = token.match(/access_token\=([^&]+)[&]?/)[1];
-            $('#accessToken').each( function(index, element) {
+            $("input[id=accessToken]").each( function(index, element) {
                 element.value = token;
             });
         }
