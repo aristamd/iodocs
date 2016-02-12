@@ -1,6 +1,5 @@
 extends layout
 block content
-  h1=apiInfo.name
   .apiName(id=apiName)
   script.
     count = 0;
@@ -15,6 +14,8 @@ block content
   - else
       - var authed =''
 
+  .content.
+    Welcome to AristaMD developer API. Use our API Console (aka I/O Docs) as an interactive tool that enables you to interact with the AristaMD API without writing a single line of code! Discover, learn, test and debug live API calls within seconds. For more details on authentication, method references and special requirements, please see the API Documentation section. You must be authenticated before using this tool. Please contact us for API credentials
   form#credentials
       input(type='hidden', name='apiName', value=apiName)
       - if (apiInfo.auth)
@@ -61,14 +62,17 @@ block content
                      input(name='oauth', value='Authenticate with OAuth', type='submit', id='oauth-auth')
               - else if (oAuthVersion == '2.0')
                   div
-                     input(name='oauth', value='Authenticate with OAuth2', type='submit', id='oauth-auth')
+                    h2.authTitle Authenticate your API Session
+                    input(name='oauth', value='Authenticate with OAuth2', type='submit', id='oauth-auth')
               div(id='oauthAuthenticated', style='display:none')
-                  br
+                  div
                   span(style='vertical-align:botttom') Authenticated with OAuth
                       img(src='images/accept.png')
               - if (authed && oAuthVersion)
                   script.
                       document.getElementById('oauthAuthenticated').style.display = 'block';
+                      document.getElementById('oauth-auth').style.display = 'none';
+
 
 
   div(id='controls')

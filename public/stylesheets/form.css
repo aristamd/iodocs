@@ -13,7 +13,7 @@
 
 .row  {
 	display: table-row;
-	width: 82%;
+	width: 98%;
 	float: left;
 }
 
@@ -40,22 +40,28 @@
 }
 
 .col-name {
-	width: 15%;
+	width: 20%;
+	font-size: 12px;
 }
 
 .col-parameter {
 	width: 25%;
+	font-size: 12px;
+
 }
 
 .col-type, .location{
 	width: 10%;
+	font-size: 12px;
+
 }
 
 .col-description {
-	width: 40%;
+	width: 35%;
+	font-size: 12px;
 }
 
-.ui-widget-content { 
+.ui-widget-content {
 	border: none;
 	background: none;
 	color: none;
@@ -64,6 +70,16 @@
 .ui-state-default {
 	float: none;
 	text-align: left;
+}
+
+.alpaca-item-container-last {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+span.ui-button .ui-button-text {
+
+	margin-top:3px;
+
 }
 
 button.ui-button-icon-only {

@@ -278,11 +278,16 @@ html {
 }
 
 body {
-  width: 960px;
-  margin: 15px auto;
+
+  margin: auto;
   padding-bottom: 20px;
 }
 
+div#body
+{
+  width:960px;
+  margin: auto;
+}
 h1 {
   font-size: 24px;
   line-height: 1.5;
@@ -342,12 +347,12 @@ li {
 }
 
 .credentials div {
-  float: left;
   margin-right: 15px;
 }
 
 .credentials form {
   margin-top: 10px;
+  display:none;
 }
 
 .credentials label {
@@ -361,9 +366,11 @@ li {
 }
 
 .credentials #oauth-auth {
-  margin-top: 20px;
 }
-
+/* hide the form */
+#credentials > section > div:nth-child(2), #credentials > section > div:nth-child(3) {
+  display:none;
+}
 #controls {
   overflow: hidden;
   *zoom: 1;
@@ -440,6 +447,7 @@ li {
 
 .methods {
   /*display: none;*/
+  padding:10px;
 }
 
 .method {
@@ -452,6 +460,7 @@ li {
   -khtml-border-radius: 5px;
   border-radius: 5px;
   margin: 10px 0;
+  padding: 10px;
   /*    &.authrequired .http-method {
           background-image: url(images/lock.png);
           background-repeat: no-repeat;
@@ -651,6 +660,7 @@ li {
 
 .get .http-method {
   background-color: #0061ac;
+
 }
 
 .get th, .get td {

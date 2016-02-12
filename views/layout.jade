@@ -7,20 +7,26 @@ html
             - var title = 'Live Documentation'
         title=title
         link(rel='stylesheet', href='stylesheets/prettify.css')
-        link(rel='stylesheet', href='stylesheets/style.css')
-        
         link(type='text/css', href='stylesheets/jquery-ui-latest.custom.css', rel='stylesheet')
         link(type='text/css', href='stylesheets/alpaca.css')
         link(type="text/css", href="stylesheets/form.css", rel="stylesheet")
         link(type="text/css", href="stylesheets/alpaca-jqueryui.css", rel="stylesheet")
+        link(type="text/css", href="stylesheets/aristamd-style.css", rel="stylesheet")
+        link(rel='stylesheet', href='stylesheets/style.css')
+
 
     body
+    div(id='header')
+        a(class='navbar-brand text-lt')
+            img(src='stylesheets/images/AristaLogoWhite.png')
+        div(class='apiTitle') DEVELOPER API
+    div(id='body')
         block content
         div(id='io-footer')
            div(class='f-left') &copy;
-              a(href='http://mashery.com/io') Mashery, Inc.
+              a(href='http://www.aristamd.com') AristaMD, Inc.
            div(class='f-right') Powered by&nbsp;
-              a(href='https://github.com/mashery/iodocs') I/O Docs Community Edition
+              a(href='http://www.mashery.com/api/io-docs') Mashery I/O Docs
         script(type='text/javascript', src='javascripts/jquery-1.11.1.min.js')
         script(type='text/javascript', src='javascripts/jquery.tmpl.js')
         script(type='text/javascript', src='javascripts/jquery-ui-latest.custom.min.js')
